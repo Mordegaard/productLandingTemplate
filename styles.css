@@ -1,0 +1,318 @@
+@font-face {
+  font-family: Raleway; src: url('fonts/Raleway-Regular.ttf');
+  font-family: Raleway; font-weight: bold; src: url('fonts/Raleway-Bold.ttf');
+  font-family: Raleway; font-weight: lighter; src: url('fonts/Raleway-Light.ttf');
+}
+
+.flexed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.scene {perspective: 600px;}
+
+body {
+  font-family: Raleway;
+  margin: 0;
+}
+
+.cr {
+  background: linear-gradient(-45deg, #00bbff, #e402ff);
+  border-radius: 50%;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, #00bbff, #e402ff);
+  overflow: hidden;
+}
+header div.hd {width: 50%; height: 100%; z-index: 1;}
+header div.cr {
+  position: absolute;
+}
+header div.cr.f {
+  width: 96px;
+  height: 96px;
+  top: 30%;
+  left: 67%;
+}
+header div.cr.s {
+  width: 170px;
+  height: 170px;
+  top: 80%;
+  left: 80%;
+}
+header div.cr.t {
+  width: 342px;
+  height: 342px;
+  top: 2%;
+  left: 28%;
+}
+header .diplom_text {
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  font-size: 3.5em;
+}
+header .diplom_image #card {
+  background: 50% 50% / 100% no-repeat url(images/diplom1.jpg);
+  min-width: 600px;
+  height: 410px;
+  box-shadow: 4px 4px 15px -2px rgba(0,0,0,0.5);
+  position: relative;
+  pointer-events: none;
+}
+header .diplom_image #card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #00bbff, #e402ff);
+  opacity: 0.25;
+}
+header .counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 12px;
+  color: white;
+  font-size: 1.2em;
+}
+
+#main {
+  width: 100%;
+  justify-content: start;
+  flex-direction: column;
+}
+
+#main #navbar {
+  width: 100%;
+  box-shadow: 0px 1px 14px -5px rgba(0,0,0,0.5);
+  justify-content: space-around;
+  font-size: 20px;
+  z-index: 5;
+  background: white;
+}
+#main #navbar.move {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#main #navbar .title {
+  font-weight: bold;
+  font-size: 1.33em;
+}
+#main #navbar .title div {
+  margin-right: 12px;
+  width: 32px;
+  height: 32px;
+}
+#main #navbar a {
+  padding: 10px;
+  border-bottom: 4px solid transparent;
+}
+#main #navbar a:hover {
+  color: #e402ff;
+  border-color: #e402ff;
+}
+#main #navbar button {
+  padding: 8px 10px;
+  color: #e402ff;
+  font: bold 1em Raleway;
+  background: transparent;
+  border: none;
+  border-radius: 666px;
+}
+#main #navbar button:hover {
+  color: white;
+  background: linear-gradient(45deg, #00bbff, #e402ff);
+}
+
+#main .block {
+  width: 100%;
+  margin: 65px 0px;
+  font-size: 22px;
+  z-index: 1;
+}
+#main .block.f .text, #main .block.f .image {
+  width: 50%;
+}
+#main .block .image div {
+  background: linear-gradient(45deg, #00bbff, #e402ff);
+  width: 600px;
+  height: 450px;
+  border-radius: 80px;
+  position: relative;
+}
+#main .block.f .image div img {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#main .block.f .text span {
+  width: 75%;
+}
+#main .block.s .text {
+  width: 90%;
+  color: black;
+  padding: 10px;
+  position: relative;
+  background: white;
+  border-radius: 40px;
+}
+#main .block.s .text:before {
+  content: "";
+  position: absolute;
+  top: -3px; left: -3px;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  border-radius: 43px;
+  background: linear-gradient(45deg, #00bbff, #e402ff);
+  z-index: -1;
+}
+#main .block.s span {
+  width: 33%;
+}
+#main .block.s .cr {
+  text-align: center;
+  min-width: 100px;
+  height: 100px;
+  transform: scale(2);
+  color: white;
+  font: bold 26px Raleway;
+  margin: 0px 100px;
+}
+
+#main .block.t .text {
+  width: 75%;
+  height: 325px;
+  border-radius: 80px;
+  overflow: hidden;
+}
+#main .block.t .image {
+  height: 100%;
+}
+#main .block.t .list {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-105deg, #00bbff -30%, #e402ff 70%);
+  flex-direction: column;
+}
+#main .block.t .list span {
+  background: white;
+  padding: 6px 14px;
+  border-radius: 666px;
+  justify-content: start;
+  width: 80%;
+  font: bold 1.1em Raleway;
+  margin: 6px 0px;
+}
+#main .block.t .list span img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+#main footer {
+  width: 100%;
+  margin-top: -200px;
+  background: linear-gradient(-105deg, #00bbff -30%, #e402ff 70%);
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  flex-direction: column;
+}
+#main footer .overlay {
+  position: absolute;
+  width: 150%;
+  height: 780px;
+  background: white;
+  border-radius: 550px;
+  top: -400px;
+  left: 0;
+}
+#main footer #scroller {
+  display: flex;
+  height: 550px;
+  width: 400px;
+  margin: 500px 0px 20px 0px;
+  overflow: hidden;
+}
+#main footer .scroller {
+  min-width: 400px;
+  height: 550px;
+  border-radius: 40px;
+  background: white;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: 0.25s;
+  flex-direction: column;
+  overflow: hidden;
+  font-size: 20px;
+}
+#main footer .scroller.showed {
+  opacity: 1;
+  transform: none;
+}
+#main footer #scrollerBtn div {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  margin: 0px 16px 50px 16px;
+}
+#main footer .scroller .line {
+  width:85%;
+  height: 3px;
+  background: rgba(128,128,128,0.33);
+  border-radius: 666px;
+}
+#main footer .scroller .images {
+  width: 100%;
+}
+#main footer .scroller .images, #main footer .scroller span {
+  height:50%;
+}
+#main footer .scroller h2 {
+  margin: 10px 0px;
+}
+#main footer .scroller span {
+  padding: 10px;
+  text-align: center;
+}
+#main footer .text {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  font: bold 50px "Comic Sans MS";
+  color: rgba(255,255,255,0.5);
+}
+#main footer .text .f {
+  transform: rotate(10deg);
+}
+#main footer .text .s {
+  font-size: 5em;
+  transform: rotate(165deg);
+}
+#main footer .attribution {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  font-size: 16px;
+  color: rgba(255,255,255,0.5);
+  width: 300px;
+}
