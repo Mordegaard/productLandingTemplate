@@ -192,8 +192,9 @@ header .counter {
   height: 100px;
   transform: scale(2);
   color: white;
-  font: bold 26px Raleway;
+  font: bold 50px Arial;
   margin: 0px 100px;
+  flex-direction: column;
 }
 
 #main .block.t .text {
